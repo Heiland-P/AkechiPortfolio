@@ -1,0 +1,37 @@
+:root{
+  --top_base: 200px;
+}
+
+.Titlescreen_Icon {
+  width: 133px;
+  height: 66px;
+  left: 50%;
+  top: var(--top_base);
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.StartTitleText {
+  left: 50%;
+  top: calc(var(--top_base) + 100px);
+  position: absolute;
+  color: white;
+  transform: translateX(-50%);
+}
+
+.TitleBodyText {
+  width: 740px;
+  left: 50%;
+  top: calc(var(--top_base) + 180px);
+  position: absolute;
+  color: white;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.StartButton{
+  left: 50%;
+  top: calc(var(--top_base) + 480px);
+  position: absolute;
+  transform: translateX(-50%);
+}

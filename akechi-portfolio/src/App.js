@@ -1,8 +1,18 @@
 import React from 'react'
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+
+import TitlePage from './pages/TitlePage'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route index element={<TitlePage />} />
+  )
+)
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <RouterProvider router={router} />
   )
 }
 

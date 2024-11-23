@@ -1,0 +1,13 @@
+.TitleText {
+  font-size: 32px;
+  font-family: "Optima nova LT Black";
+  line-height: 38.2px;
+  word-wrap: break-word;
+}
+
+.BodyText {
+    font-size: 16px;
+    font-family: "Optima nova LT Black";
+    line-height: 24px;
+    word-wrap: break-word;
+}
