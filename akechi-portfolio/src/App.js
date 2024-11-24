@@ -12,7 +12,7 @@ import PortfolioPage from "./pages/PortfolioPage";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
-      <Route index element={<TitlePage />} />
+      <Route path="AkechiPortfolio" element={<TitlePage />} />
       <Route path="portfolio" element={<PortfolioPage />} />
     </Route>
   )
