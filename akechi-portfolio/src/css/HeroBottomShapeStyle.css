@@ -1,0 +1,15 @@
+.HBShape{
+    bottom: 0;
+    width:100%;
+    position: absolute;
+    z-index: -90;
+    transform-origin: bottom left;
+}
+
+.RShape{
+    height: 80%;
+}
+
+.YShape{
+    height: 100%;
+}

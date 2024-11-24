@@ -1,0 +1,27 @@
+.HAkechi{
+    bottom: 0px;
+    padding-left: 10%;
+    height: 80%;
+    width: auto;
+    aspect-ratio: fixed;
+    position: absolute;
+}
+
+.HAkechiImg{
+    padding-left: 1%;
+    height: 100%;
+    position: absolute;
+}
+
+.HAkechiImgR{
+    height: 100%;
+    bottom: 3%;
+    position: absolute;
+}
+
+.HAkechiImgY{
+    padding-left: 1.05%;
+    height: 100%;
+    bottom: 5%;
+    position: absolute;
+}
