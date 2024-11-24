@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import TitleIcon from "../assets/image/TitleScreen_Icon.png";
 import SimpleButton from "../components/SimpleButton";
@@ -8,9 +9,11 @@ import "../css/GeneralStyle.css";
 import "../css/TitlePageStyle.css";
 
 const TitlePage = () => {
+
   useEffect(() => {
     document.body.style.background = "black";
   }, []);
+  const navigate = useNavigate();
 
   return (
     <div className="TitleMenu">
@@ -75,6 +78,9 @@ const TitlePage = () => {
           hover_text_color="black"
           bg_color="white"
           text_size="25px"
+          onClickHandler={() => {
+            navigate("/portfolio");
+          }}
         />
       </div>
     </div>

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'P5_Menu';
+    src: url('../assets/font/Persona5MenuFontPrototype-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'P5_Expose';
+    src: url('../assets/font/Expose-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}

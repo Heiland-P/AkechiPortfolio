@@ -1,4 +1,4 @@
-.SimpleButton{
+.ComplexButton{
     background: none;
     border: none;
     color: var(--text-color);
@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.SimpleButton .backgroundShape{
+.ComplexButton .backgroundShape{
     position: absolute;
     top: 0;
     left: 0;
@@ -18,15 +18,18 @@
     opacity: 0;
 }
 
-.SimpleButton:hover .backgroundShape{
+.ComplexButton:hover .backgroundShape{
     opacity: 1;
 }
 
-.SimpleButton svg{
+.ComplexButton svg{
     width: 100%;
     height: 100%;
+    position: absolute;
+    transform: translateX(-50%);
+    mix-blend-mode: color-dodge;
 }
 
-.SimpleButton:hover{
+.ComplexButton:hover{
     color: var(--text-color-hover);
 } 

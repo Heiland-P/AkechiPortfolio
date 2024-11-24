@@ -1,3 +1,10 @@
+.body{
+  width: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
 .TitleText {
   font-size: 32px;
   font-family: "Optima nova LT Black";
