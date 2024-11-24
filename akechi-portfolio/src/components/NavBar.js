@@ -1,6 +1,6 @@
 import React from "react";
 import { motion , useAnimationControls} from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import ComplexButton from "../components/ComplexButton";
 

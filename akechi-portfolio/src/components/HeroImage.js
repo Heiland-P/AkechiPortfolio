@@ -2,13 +2,15 @@ import React from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { useEffect } from "react";
 
-import HAkechi from "../assets/image/Confidant_Akechi.png";
+// import HAkechi from "../assets/image/Confidant_Akechi.png";
 import HAkechiR from "../assets/image/Confidant_Akechi_R.png";
 import HAkechiY from "../assets/image/Confidant_Akechi_Y.png";
 
+import EyeFollowAkechi from "./EyeFollowAkechi";
+
 import "../css/HeroImageStyle.css";
 
-function HeroImage({ animationState, setAnimationState, animationTime }) {
+function HeroImage({ animationState, setAnimationState, animationTime,pause }) {
 
   const YControl = useAnimationControls();
   const RControl = useAnimationControls();
@@ -72,7 +74,10 @@ function HeroImage({ animationState, setAnimationState, animationTime }) {
           }}
         />
 
-        <img className="HAkechiImg" src={HAkechi} alt="" />
+        {/* <img className="HAkechiImg" src={HAkechi} alt="" /> */}
+      
+        <EyeFollowAkechi pause={pause}/>
+      
       </div>
     </div>
   );

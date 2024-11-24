@@ -23,6 +23,7 @@ function Hero() {
     useState(false);
   const [playHeroImageAnimation, setPlayHeroImageAnimation] = useState(false);
   const [ColorAnimationComplete, setColorAnimationComplete] = useState(false);
+  const [pauseEyeFollow, setPauseEyeFollow] = useState(true);
 
   useEffect(() => {
     if (NameAnimationComplete) {
@@ -34,6 +35,7 @@ function Hero() {
   useEffect(() => {
     if (ColorAnimationComplete) {
       setPlayHeroImageAnimation(true);
+      setPauseEyeFollow(false);
     }
   }, [ColorAnimationComplete]);
 
@@ -81,7 +83,9 @@ function Hero() {
 
         <div className="HBImage body">
           <HeroImage animationState={playHeroImageAnimation} 
-          animationTime={0.2}/>
+          animationTime={0.2}
+          pause={pauseEyeFollow}
+          />
         </div>
       </div>
 
