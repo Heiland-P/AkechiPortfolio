@@ -11,6 +11,7 @@ function NavBar({
   animationState,
   setAnimationState,
   animationTime = 1,
+  onAnimationComplete,
 }) {
 
   const controls = useAnimationControls();
@@ -29,8 +30,9 @@ function NavBar({
         variants={{
           enter: { width: "100vw" },
         }}
-        transition={{ duration: animationTime }}
+        transition={{ duration: animationTime, ease: "easeInOut" }}
         animate={controls}
+        onAnimationComplete={onAnimationComplete}
       />
 
       <div className="NavParent">

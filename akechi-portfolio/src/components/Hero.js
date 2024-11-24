@@ -14,10 +14,15 @@ import "../css/GeneralStyle.css";
 import "../css/HeroStyle.css";
 
 function Hero() {
+
+    const animationTime = 0.5;
+
   const [NameAnimationComplete, setNameAnimationComplete] = useState(false);
   const [playNavBarAnimation, setPlayNavBarAnimation] = useState(false);
   const [playBottomShapeAnimation, setPlayBottomShapeAnimation] =
     useState(false);
+  const [playHeroImageAnimation, setPlayHeroImageAnimation] = useState(false);
+  const [ColorAnimationComplete, setColorAnimationComplete] = useState(false);
 
   useEffect(() => {
     if (NameAnimationComplete) {
@@ -26,11 +31,21 @@ function Hero() {
     }
   }, [NameAnimationComplete]);
 
+  useEffect(() => {
+    if (ColorAnimationComplete) {
+      setPlayHeroImageAnimation(true);
+    }
+  }, [ColorAnimationComplete]);
+
   return (
     <div>
       <NavBar
         animationState={playNavBarAnimation}
         setAnimationState={setPlayNavBarAnimation}
+        animationTime={animationTime}
+        onAnimationComplete={() => {
+          setColorAnimationComplete(true);
+        }}
       />
       <div className="HText body">
         <div className="HTextSpacerT"></div>
@@ -60,11 +75,13 @@ function Hero() {
           <HeroBottomShape
             animationState={playBottomShapeAnimation}
             setAnimationState={setPlayBottomShapeAnimation}
+            animationTime={animationTime}
           />
         </div>
 
         <div className="HBImage body">
-          <HeroImage />
+          <HeroImage animationState={playHeroImageAnimation} 
+          animationTime={0.2}/>
         </div>
       </div>
 
