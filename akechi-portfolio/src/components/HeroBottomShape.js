@@ -6,7 +6,6 @@ import HBShapeR from "../assets/image/HBottom_red.png";
 import HBShapeY from "../assets/image/HBottom_y.png";
 
 import "../css/HeroBottomShapeStyle.css";
-import { use } from "motion/react-client";
 
 function HeroBottomShape({ animationState, setAnimationState, animationTime }) {
   const RYControl = useAnimationControls();

@@ -9,8 +9,8 @@ const App = () => {
   return (
     <Router basename="/AkechiPortfolio">
       <Routes >
-        <Route path="/" exact component={TitlePage} />
-        <Route path="/portfolio" exact component={PortfolioPage} />
+        <Route exact path="/" element={<TitlePage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
       </Routes >
     </Router>
   );
