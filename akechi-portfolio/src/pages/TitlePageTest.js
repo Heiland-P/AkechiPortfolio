@@ -1,33 +1,21 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 
 import TitleIcon from "../assets/image/TitleScreen_Icon.png";
 import SimpleButton from "../components/SimpleButton";
 
-import {loadProgress, newGame } from "../SaveLoad.js";
-
 import "../css/GeneralStyle.css";
 import "../css/TitlePageStyle.css";
 
-const TitlePage = () => {
+const TitlePageTest = () => {
+
   const navigate = useNavigate();
-  const [gameProgress, setGameProgress] = useState(0);
 
   useEffect(() => {
     document.body.style.background = "black";
-
-    const fetchProgress = async () => {
-      const progress = await loadProgress();
-      const levelMatch = progress.match(/level:\s*(\d+)/);
-      const level = levelMatch ? parseInt(levelMatch[1], 10) : 0;
-      setGameProgress(level);
-      console.log("Loaded Level: ", level);
-    };
-
-    fetchProgress();
-    
   }, []);
+
 
   return (
     <div className="TitleMenu">
@@ -83,38 +71,29 @@ const TitlePage = () => {
           .
           <br />
         </span>
+
+        <span>
+          <br />
+          Full game coming 2025.
+          </span>
       </div>
 
       <div className="StartButton">
         <SimpleButton
-          text="New Game"
+          text="Start"
           text_color="white"
           hover_text_color="black"
           bg_color="white"
           text_size="25px"
           onClickHandler={() => {
-            newGame();
-            navigate("/portfolio");
+            navigate("/portfoliotest");
           }}
         />
       </div>
 
-      {gameProgress > 0 && (
-        <div className="ConButton">
-          <SimpleButton
-            text="Continue"
-            text_color="white"
-            hover_text_color="black"
-            bg_color="white"
-            text_size="25px"
-            onClickHandler={() => {
-              navigate("/portfolio");
-            }}
-          />
-        </div>
-      )}
+
     </div>
   );
 };
 
-export default TitlePage;
+export default TitlePageTest;

@@ -46,7 +46,6 @@ function TypedInWords({
     >
       {text.split("").map((char, index) => (
         <motion.span
-          startAnimation={start}
           key={char + "-" + index}
           custom={index}
           initial="hidden"

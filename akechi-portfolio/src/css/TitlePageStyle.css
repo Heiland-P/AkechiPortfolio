@@ -1,5 +1,5 @@
 :root{
-  --top_base: 200px;
+  --top_base: 180px;
 }
 
 .Titlescreen_Icon {
@@ -32,6 +32,14 @@
 .StartButton{
   left: 50%;
   top: calc(var(--top_base) + 480px);
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+
+.ConButton{
+  left: 50%;
+  top: calc(var(--top_base) + 550px);
   position: absolute;
   transform: translateX(-50%);
 }

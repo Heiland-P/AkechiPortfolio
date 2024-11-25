@@ -34,7 +34,7 @@ const SimpleButton = ({
       }}
       onClick={onClickHandler}
     >
-      <div class="backgroundShape">
+      <div className="backgroundShape">
         <svg viewBox="0 0 108.1 47" preserveAspectRatio="none">
           <motion.polygon
             fill={bg_color}
