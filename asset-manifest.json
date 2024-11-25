@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AkechiPortfolio/static/css/main.f344cb4a.css",
-    "main.js": "/AkechiPortfolio/static/js/main.efb18f62.js",
+    "main.js": "/AkechiPortfolio/static/js/main.51e2c2b0.js",
     "static/js/453.a70a4db1.chunk.js": "/AkechiPortfolio/static/js/453.a70a4db1.chunk.js",
     "static/media/logo.png": "/AkechiPortfolio/static/media/logo.3d6b1a1c80ce434b7bb6.png",
     "static/media/Expose-Regular.otf": "/AkechiPortfolio/static/media/Expose-Regular.ffb725c3d77507a79c30.otf",
@@ -11,11 +11,11 @@
     "static/media/Confidant_Akechi_R.png": "/AkechiPortfolio/static/media/Confidant_Akechi_R.b3c10445b4c8dc983395.png",
     "index.html": "/AkechiPortfolio/index.html",
     "main.f344cb4a.css.map": "/AkechiPortfolio/static/css/main.f344cb4a.css.map",
-    "main.efb18f62.js.map": "/AkechiPortfolio/static/js/main.efb18f62.js.map",
+    "main.51e2c2b0.js.map": "/AkechiPortfolio/static/js/main.51e2c2b0.js.map",
     "453.a70a4db1.chunk.js.map": "/AkechiPortfolio/static/js/453.a70a4db1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f344cb4a.css",
-    "static/js/main.efb18f62.js"
+    "static/js/main.51e2c2b0.js"
   ]
 }
