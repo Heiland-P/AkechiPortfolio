@@ -8,6 +8,10 @@
     position: relative;
 }
 
+.ComplexButton:focus{
+    outline: none;
+}
+
 .ComplexButton .backgroundShape{
     position: absolute;
     top: 0;

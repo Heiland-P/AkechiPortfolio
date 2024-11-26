@@ -1,7 +1,8 @@
 .Log{
-  width: 30%;
+  width: 20%;
   right: 5%;
   bottom: 10%;
+  z-index: 200;
   position: absolute;
 }
 
@@ -11,9 +12,12 @@
   overflow: visible;
   bottom: 0;
   right: 0;
-  z-index: 200;
   position: absolute;
   width: 20%;
+}
+
+.LogButton:focus{
+  outline: none;
 }
 
 .LogButton:hover{

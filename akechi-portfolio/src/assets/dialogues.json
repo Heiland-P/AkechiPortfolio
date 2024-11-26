@@ -1,0 +1,47 @@
+[
+  {
+    "id": "Greeting",
+    "lines": [
+      {
+        "text": "Oh? A fan, here of all places?",
+        "background": "assets/image/Dialogue/W_Surprise.png"
+      },
+      {
+        "text": "Maruki…… a ‘Happy Reality’, huh?",
+        "background": "assets/image/Dialogue/W_Angry.png"
+      },
+      {
+        "text": "……",
+        "background": "assets/image/Dialogue/W_Wistful.png"
+      },
+      {
+        "text": "Well, thank you for your support. ",
+        "background": "assets/image/Dialogue/W_Happy.png"
+      },
+      {
+        "text": "I must admit, my popularity isn’t quite what it once was, thanks to certain… recent events. ",
+        "background": "assets/image/Dialogue/W_Sad.png"
+      },
+      {
+        "text": "Here, take this—my name card. It includes my website. ",
+        "background": "assets/image/Dialogue/W_N.png"
+      },
+      {
+        "text": "You might uncover some of my… darker secrets there. ",
+        "background": "assets/image/Dialogue/W_Smug.png"
+      },
+      {
+        "text": "Just kidding, of course. ",
+        "background": "assets/image/Dialogue/W_Happy.png"
+      },
+      {
+        "text": "You’ll also find my contact information.",
+        "background": "assets/image/Dialogue/W_N.png"
+      },
+      {
+        "text": " If you ever come across a case you need help with, don't hesitate to send me an email. ",
+        "background": "assets/image/Dialogue/W_Smug.png"
+      }
+    ]
+  }
+]

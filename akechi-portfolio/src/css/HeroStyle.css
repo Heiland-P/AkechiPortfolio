@@ -53,7 +53,7 @@
     
   /* background style */
   .background {
-    height: 99.1%;
+    height: 100%;
     position: absolute;
     z-index: -100;
   }

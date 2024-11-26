@@ -8,6 +8,10 @@
     position: relative;
 }
 
+.SimpleButton:focus{
+    outline: none;
+}
+
 .SimpleButton .backgroundShape{
     position: absolute;
     top: 0;
