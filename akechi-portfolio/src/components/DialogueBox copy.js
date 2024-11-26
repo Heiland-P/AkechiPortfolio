@@ -40,21 +40,20 @@ function DialogueBox({ dialogueId, onDialogueEnd }) {
     if (currentLineIndex < dialogue.lines.length - 1) {
       setCurrentLineIndex(currentLineIndex + 1);
     } else {
+      onDialogueEnd();
       control.start("exit");
     }
   };
 
   useEffect(() => {
     control.start("enter");
-  },[control,dialogue]);
+  },[control]);
 
-  if (!dialogue) 
-    {
-      console.log("dialogue is null");
-      return null
-    };
+  if (!dialogue) return null;
 
   const currentLine = dialogue.lines[currentLineIndex];
+
+  console.log(backgroundImage);
 
   return (
     <motion.div
@@ -67,19 +66,9 @@ function DialogueBox({ dialogueId, onDialogueEnd }) {
       animate={control}
       initial={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      onAnimationComplete={(def) =>{
-        if(def === "exit") {
-          onDialogueEnd();
-        }
-      }}
     >
       <div className="BgColor"></div>
-      <motion.div className="ID" initial={{ x: -100 }} 
-      variants={{
-        enter: { x: 0 },
-        exit: { x: -100  },
-      }}
-      animate={control}>
+      <motion.div className="ID" initial={{ x: -100 }} animate={{ x: 0 }}>
         <img className="IDImg" src={IDBg} alt="icon" />
         <div className="IDText">{dialogueId}</div>
       </motion.div>
@@ -106,12 +95,8 @@ function DialogueBox({ dialogueId, onDialogueEnd }) {
 
       <motion.div
         className="DialogueBg"
-        variants={{
-          enter: { y: 0 },
-          exit: { y: 100 },
-        }}
         initial={{ y: 100 }}
-        animate={control}
+        animate={{ y: 0 }}
       >
         <img className="DialogueImg" src={backgroundImage} alt="background" />
         <div className="DialogueText BodyText">{currentLine.text}</div>

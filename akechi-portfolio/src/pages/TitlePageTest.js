@@ -1,6 +1,8 @@
 import React from "react";
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
+
+import Config from "../Config";
 
 import TitleIcon from "../assets/image/TitleScreen_Icon.png";
 import SimpleButton from "../components/SimpleButton";
@@ -12,9 +14,53 @@ const TitlePageTest = () => {
 
   const navigate = useNavigate();
 
+  const [testCode, setTestCode] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
   useEffect(() => {
     document.body.style.background = "black";
   }, []);
+
+  // Handle test code input
+  const handleTestCodeChange = (e) => {
+    setTestCode(e.target.value);
+  };
+
+
+  const handleTestCodeSubmit = async () => {
+    if(!testCode) {
+      navigate("/portfoliotest");
+      return;
+    }
+
+    console.log("test code:", testCode);
+    
+    try {
+      const response = await fetch(`${Config.backendUrl}/check-testcode`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ passcode: testCode }),
+      }
+      );
+
+      const data = await response.json();
+
+
+      console.log("Test code validation response:", data);
+
+      if (data.success) {
+        navigate("/portfolio");
+      } else {
+        setErrorMessage("Invalid test code.");
+      }
+    } catch (error) {
+      console.error("Error validating test code:", error);
+      setErrorMessage("An error occurred. Please try again.");
+    }
+  };
+
 
 
   return (
@@ -86,9 +132,19 @@ const TitlePageTest = () => {
           bg_color="white"
           text_size="25px"
           onClickHandler={() => {
-            navigate("/portfoliotest");
+            handleTestCodeSubmit();
           }}
         />
+      </div>
+
+      <div className="TestCodeInput">
+        <input
+          type="text"
+          value={testCode}
+          onChange={handleTestCodeChange}
+          placeholder="Enter test code"
+        /> 
+        {errorMessage && <div className="ErrorMessage">{errorMessage}</div>}
       </div>
 
 

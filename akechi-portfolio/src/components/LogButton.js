@@ -6,15 +6,29 @@ import ComplexButton from './ComplexButton'
 
 import '../css/LogButtonStyle.css'
 
-function LogButton() {
+function LogButton(
+  {
+    onActivateDialogue,
+  }
+
+) {
+
+  const handleClick = (id) => {
+    onActivateDialogue(id);
+  }
+
   return (
     <div className='Log'>
-      <button className="LogButton">
+      <button className="LogButton"
+        onClick={() => handleClick("Greeting")}
+      >
         <motion.img className="LBImge" src={ButtonIcon} alt="" 
           whileHover={{ scale: 1.3 }}
         />
       </button>
-      <ComplexButton className="test" text='TestButton'/>
+      {/* <ComplexButton className="test" text='TestButton'
+        onClickHandler={() => handleClick("Greeting")}
+      /> */}
     </div>
   )
 }

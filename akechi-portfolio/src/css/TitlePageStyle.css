@@ -43,3 +43,19 @@
   position: absolute;
   transform: translateX(-50%);
 }
+
+/* Test page Style */
+.TestCodeInput{
+  position: absolute;
+  left: 0%;
+  bottom : 100px;
+}
+
+.ErrorMessage{
+  position: absolute;
+  left: 50%;
+  width: 150px;
+  transform: translateX(-50%);
+  top: 50px;
+  color: red;
+}
