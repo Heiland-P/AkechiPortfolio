@@ -91,6 +91,9 @@ const TitlePageTest = () => {
           You cannot proceed without the name card.
           <br />
           <br />
+          Click Start without testcode to check the main page.
+
+          {/* <br />
           Contact the author of the game for pictures of the name card.
           <br />
           <br />
@@ -115,7 +118,7 @@ const TitlePageTest = () => {
             bottom right
           </span>
           .
-          <br />
+          <br /> */}
         </span>
 
         <span>
