@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkakechi_portfolio=self.webpackChunkakechi_portfolio||[]).push([[472],{9472:(e,k,o)=>{o.r(k);o(1405)}}]);

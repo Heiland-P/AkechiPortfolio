@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkakechi_portfolio=self.webpackChunkakechi_portfolio||[]).push([[464],{464:(e,o,a)=>{e.exports=a.p+"static/media/Expose-Regular.ffb725c3d77507a79c30.otf"}}]);
