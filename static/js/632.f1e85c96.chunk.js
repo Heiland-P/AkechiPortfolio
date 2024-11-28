@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkakechi_portfolio=self.webpackChunkakechi_portfolio||[]).push([[632],{6632:(c,e,i)=>{c.exports=i.p+"static/media/Confidant_Back_Akechi.6c657cb31cd193314165.png"}}]);

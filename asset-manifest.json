@@ -1,11 +1,9 @@
 {
   "files": {
     "main.css": "/AkechiPortfolio/static/css/main.83904032.css",
-    "main.js": "/AkechiPortfolio/static/js/main.b27ba886.js",
+    "main.js": "/AkechiPortfolio/static/js/main.ceb0340e.js",
     "static/js/464.88c65ec4.chunk.js": "/AkechiPortfolio/static/js/464.88c65ec4.chunk.js",
     "static/js/708.634450e4.chunk.js": "/AkechiPortfolio/static/js/708.634450e4.chunk.js",
-    "static/js/616.0155f152.chunk.js": "/AkechiPortfolio/static/js/616.0155f152.chunk.js",
-    "static/js/632.f1e85c96.chunk.js": "/AkechiPortfolio/static/js/632.f1e85c96.chunk.js",
     "static/js/860.6a8ae1d9.chunk.js": "/AkechiPortfolio/static/js/860.6a8ae1d9.chunk.js",
     "static/js/225.5e9d28d6.chunk.js": "/AkechiPortfolio/static/js/225.5e9d28d6.chunk.js",
     "static/js/229.97ec55f5.chunk.js": "/AkechiPortfolio/static/js/229.97ec55f5.chunk.js",
@@ -13,7 +11,6 @@
     "static/js/983.fb0c855e.chunk.js": "/AkechiPortfolio/static/js/983.fb0c855e.chunk.js",
     "static/js/754.f4499ebc.chunk.js": "/AkechiPortfolio/static/js/754.f4499ebc.chunk.js",
     "static/js/849.cbb2ff19.chunk.js": "/AkechiPortfolio/static/js/849.cbb2ff19.chunk.js",
-    "static/js/974.92d0b240.chunk.js": "/AkechiPortfolio/static/js/974.92d0b240.chunk.js",
     "static/js/545.c9d803fe.chunk.js": "/AkechiPortfolio/static/js/545.c9d803fe.chunk.js",
     "static/js/472.32d6f452.chunk.js": "/AkechiPortfolio/static/js/472.32d6f452.chunk.js",
     "static/js/453.f70ebb83.chunk.js": "/AkechiPortfolio/static/js/453.f70ebb83.chunk.js",
@@ -37,13 +34,13 @@
     "static/media/Dialogue_deco.png": "/AkechiPortfolio/static/media/Dialogue_deco.61b0354277a594aa4754.png",
     "index.html": "/AkechiPortfolio/index.html",
     "main.83904032.css.map": "/AkechiPortfolio/static/css/main.83904032.css.map",
-    "main.b27ba886.js.map": "/AkechiPortfolio/static/js/main.b27ba886.js.map",
+    "main.ceb0340e.js.map": "/AkechiPortfolio/static/js/main.ceb0340e.js.map",
     "545.c9d803fe.chunk.js.map": "/AkechiPortfolio/static/js/545.c9d803fe.chunk.js.map",
     "453.f70ebb83.chunk.js.map": "/AkechiPortfolio/static/js/453.f70ebb83.chunk.js.map",
     "405.25909ed3.chunk.js.map": "/AkechiPortfolio/static/js/405.25909ed3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83904032.css",
-    "static/js/main.b27ba886.js"
+    "static/js/main.ceb0340e.js"
   ]
 }
