@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkakechi_portfolio=self.webpackChunkakechi_portfolio||[]).push([[708],{6708:(e,a,t)=>{e.exports=t.p+"static/media/Persona5MenuFontPrototype-Regular.eaf9adfa13ad3376ffd6.ttf"}}]);
