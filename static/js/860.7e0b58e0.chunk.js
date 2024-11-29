@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkakechi_portfolio=self.webpackChunkakechi_portfolio||[]).push([[860],{9860:(e,c,p)=>{e.exports=p.p+"static/media/W_Angry.cb91069bfa7cf0877df4.png"}}]);
