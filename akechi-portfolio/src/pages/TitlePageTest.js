@@ -38,14 +38,6 @@ const TitlePageTest = () => {
     console.log("test code:", testCode);
     
     try {
-      // const response = await fetch(`${Config.backendUrl}/check-testcode`, {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({ passcode: testCode }),
-      // }
-      // );
 
       const response = await instance.post('/check-testcode', {
         passcode: testCode
@@ -98,6 +90,10 @@ const TitlePageTest = () => {
           <br />
           <br />
           Click Start without testcode to check the main page.
+          <br />
+          Click Button on the Bottom Right to check the previous story.
+          <br />
+          <br />
 
           {/* <br />
           Contact the author of the game for pictures of the name card.

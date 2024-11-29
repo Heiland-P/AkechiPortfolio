@@ -10,18 +10,20 @@ import TitlePageTest from "./pages/TitlePageTest";
 import Loading from "./components/Loading";
 
 import { useEffect, useState } from "react";
-import { usePreloadImages , usePreloadFont} from "./Hooks/LoadImage";
+import { usePreloadImages, usePreloadFont } from "./Hooks/LoadImage";
 
 const App = () => {
   const [imagesToPreload, setImagesToPreload] = useState([]);
 
   const [fontsToPreload, setFontsToPreload] = useState([
-    { name: 'P5_Expose', url: require('./assets/font/Expose-Regular.otf') },
-    { name: 'P5_Menu', url: require('./assets/font/Persona5MenuFontPrototype-Regular.ttf') }
+    { name: "P5_Expose", url: require("./assets/font/Expose-Regular.otf") },
+    {
+      name: "P5_Menu",
+      url: require("./assets/font/Persona5MenuFontPrototype-Regular.ttf"),
+    },
   ]);
 
   useEffect(() => {
-
     console.log("Preloading...");
 
     const loadImagesFromContext = (context) => {
@@ -65,15 +67,14 @@ const App = () => {
 
   return (
     <div>
-      { (isLoadingImage || isLoadingFont )? (
+      {isLoadingImage || isLoadingFont ? (
         <Loading />
       ) : (
         <Router>
           <Routes>
-            <Route exact path="/" element={<TitlePageTest />} />
-            <Route path="/portfoliotest" element={<PortfolioPageTest />} />
-
             <Route path="/" element={<MainLayout />}>
+              <Route exact path="/" element={<TitlePageTest />} />
+              <Route path="/portfoliotest" element={<PortfolioPageTest />} />
               <Route path="/title" element={<TitlePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
             </Route>
