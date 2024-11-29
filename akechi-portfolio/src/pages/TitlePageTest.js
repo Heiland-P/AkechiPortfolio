@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
+import instance from "../axiosInstance";
+
 import Config from "../Config";
 
 import TitleIcon from "../assets/image/TitleScreen_Icon.png";
@@ -36,17 +38,21 @@ const TitlePageTest = () => {
     console.log("test code:", testCode);
     
     try {
-      const response = await fetch(`${Config.backendUrl}/check-testcode`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ passcode: testCode }),
-      }
-      );
+      // const response = await fetch(`${Config.backendUrl}/check-testcode`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({ passcode: testCode }),
+      // }
+      // );
 
-      const data = await response.json();
+      const response = await instance.post('/check-testcode', {
+        passcode: testCode
+      });
 
+      //const data = await response.json();
+      const data = response.data;
 
       console.log("Test code validation response:", data);
 

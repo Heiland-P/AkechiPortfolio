@@ -45,51 +45,6 @@ function usePreloadImages(imageArray, fontArray) {
   return isLoading;
 }
 
-// function usePreloadFont(fontArray) {
-//   const [isLoading, setIsLoading] = useState(true);
-//   const [loadedFont, setLoadedFont] = useState(0);
-
-//   useEffect(() => {
-//     const totalFont = fontArray.length;
-
-//     if (totalFont === 0) {
-//       //setIsLoading(false);
-//       return;
-//     }
-
-//     console.log(totalFont);
-
-//     const preloadFont = (font) => {
-//       const fontFace = new FontFace(font.name, `url(${font.url})`);
-//       fontFace
-//         .load()
-//         .then(() => {
-//           console.log(`Successfully loaded font: ${font.name}`);
-//           document.fonts.add(fontFace);
-//           setLoadedFont((prevCount) => prevCount + 1);
-//         })
-//         .catch((error) => {
-//           console.error(`Failed to load font: ${font.name}`, error);
-//           setLoadedFont((prevCount) => prevCount + 1); // Consider it loaded to avoid infinite loading state
-//         });
-//     };
-
-//     fontArray.forEach(preloadFont);
-//   }, [fontArray]);
-
-//   useEffect(() => {
-//     if (
-//       loadedFont === fontArray.length &&
-//       fontArray.length > 0
-//     ) {
-//       console.log("All images loaded.");
-//       setIsLoading(false);
-//     }
-//   }, [loadedFont, fontArray.length]);
-
-//   return isLoading;
-// }
-
 const usePreloadFont = (fonts) => {
   const [isLoading, setIsLoading] = useState(true);
 

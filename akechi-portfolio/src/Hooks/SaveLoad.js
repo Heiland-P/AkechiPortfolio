@@ -1,16 +1,15 @@
 import Config from "../Config";
+import instance from "../axiosInstance";
 
 // Save progress
 const saveProgress = async (progress) => {
   try {
     // Send progress to backend for encryption
-    const response = await fetch(`${Config.backendUrl}/save-progress`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ progress }),
+    const response = await instance.post(`${Config.backendUrl}/save-progress`, {
+      progress,
     });
 
-    const data = await response.json();
+    const data = response.data;
     if (data.success) {
       // Store encrypted progress in localStorage
       localStorage.setItem("encryptedProgress", data.encryptedProgress);
@@ -24,7 +23,6 @@ const saveProgress = async (progress) => {
 };
 
 const newGame = async () => {
-
   console.log("New Game Started");
   const newGameInfo = "{level: 0}";
   saveProgress(newGameInfo);
@@ -42,19 +40,17 @@ const loadProgress = async () => {
     }
 
     // Send encrypted progress to backend for decryption
-    const response = await fetch(`${Config.backendUrl}/get-progress`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ encryptedProgress }),
+    const response = await instance.post(`${Config.backendUrl}/get-progress`, {
+      encryptedProgress,
     });
 
-    const data = await response.json();
+    const data = response.data;
     if (data.success) {
       console.log("Decrypted progress:", data.progress);
       return data.progress;
     } else {
       console.error("Failed to decrypt progress:", data.message);
-      return { level: 0}; // Default progress
+      return { level: 0 }; // Default progress
     }
   } catch (error) {
     console.error("Error loading progress:", error);
