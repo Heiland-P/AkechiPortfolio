@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/AkechiPortfolio/static/css/main.83904032.css",
-    "main.js": "/AkechiPortfolio/static/js/main.9bf39b19.js",
+    "main.js": "/AkechiPortfolio/static/js/main.674f9c45.js",
     "static/js/545.c9d803fe.chunk.js": "/AkechiPortfolio/static/js/545.c9d803fe.chunk.js",
     "static/js/472.32d6f452.chunk.js": "/AkechiPortfolio/static/js/472.32d6f452.chunk.js",
     "static/js/453.f70ebb83.chunk.js": "/AkechiPortfolio/static/js/453.f70ebb83.chunk.js",
-    "static/js/405.25909ed3.chunk.js": "/AkechiPortfolio/static/js/405.25909ed3.chunk.js",
+    "static/js/405.203de1e8.chunk.js": "/AkechiPortfolio/static/js/405.203de1e8.chunk.js",
     "static/media/Expose-Regular.otf": "/AkechiPortfolio/static/media/Expose-Regular.ffb725c3d77507a79c30.otf",
+    "static/media/Loading_Head.png": "/AkechiPortfolio/static/media/Loading_Head.6db7cdbd598d98dd8ce8.png",
     "static/media/W_Smug.png": "/AkechiPortfolio/static/media/W_Smug.690db55caaa17a645d56.png",
     "static/media/W_Happy.png": "/AkechiPortfolio/static/media/W_Happy.a2598a2afebd655dd423.png",
     "static/media/W_N.png": "/AkechiPortfolio/static/media/W_N.2538974c19aa0b6ee006.png",
@@ -20,16 +21,17 @@
     "static/media/Confidant_Akechi.png": "/AkechiPortfolio/static/media/Confidant_Akechi.380e2c774d0a8f3403d1.png",
     "static/media/Confidant_Akechi_NoEye.png": "/AkechiPortfolio/static/media/Confidant_Akechi_NoEye.77f1d667f2fc3626a405.png",
     "static/media/index.cjs": "/AkechiPortfolio/static/media/index.1282334337c6cac7deca.cjs",
+    "static/media/Loading_Word.png": "/AkechiPortfolio/static/media/Loading_Word.8873c1cb420e39456827.png",
     "static/media/Dialogue_deco.png": "/AkechiPortfolio/static/media/Dialogue_deco.61b0354277a594aa4754.png",
     "index.html": "/AkechiPortfolio/index.html",
     "main.83904032.css.map": "/AkechiPortfolio/static/css/main.83904032.css.map",
-    "main.9bf39b19.js.map": "/AkechiPortfolio/static/js/main.9bf39b19.js.map",
+    "main.674f9c45.js.map": "/AkechiPortfolio/static/js/main.674f9c45.js.map",
     "545.c9d803fe.chunk.js.map": "/AkechiPortfolio/static/js/545.c9d803fe.chunk.js.map",
     "453.f70ebb83.chunk.js.map": "/AkechiPortfolio/static/js/453.f70ebb83.chunk.js.map",
-    "405.25909ed3.chunk.js.map": "/AkechiPortfolio/static/js/405.25909ed3.chunk.js.map"
+    "405.203de1e8.chunk.js.map": "/AkechiPortfolio/static/js/405.203de1e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83904032.css",
-    "static/js/main.9bf39b19.js"
+    "static/js/main.674f9c45.js"
   ]
 }
