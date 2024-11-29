@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import TitleIcon from "../assets/image/TitleScreen_Icon.png";
 import SimpleButton from "../components/SimpleButton";
 
-import {loadProgress, newGame } from "../SaveLoad.js";
+import {loadProgress, newGame } from "../Hooks/SaveLoad";
 
 import "../css/GeneralStyle.css";
 import "../css/TitlePageStyle.css";

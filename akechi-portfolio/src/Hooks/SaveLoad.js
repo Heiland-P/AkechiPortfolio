@@ -1,4 +1,4 @@
-import Config from "./Config";
+import Config from "../Config";
 
 // Save progress
 const saveProgress = async (progress) => {
@@ -27,9 +27,7 @@ const newGame = async () => {
 
   console.log("New Game Started");
   const newGameInfo = "{level: 0}";
-  localStorage.setItem("encryptedProgress", newGameInfo);
   saveProgress(newGameInfo);
-
 };
 
 // Load progress
