@@ -25,7 +25,7 @@ const saveProgress = async (progress) => {
 const newGame = async () => {
   console.log("New Game Started");
   const newGameInfo = "{level: 0}";
-  saveProgress(newGameInfo);
+  await saveProgress(newGameInfo);
 };
 
 // Load progress

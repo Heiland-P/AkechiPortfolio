@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { saveProgress, loadProgress } from "../Hooks/SaveLoad";
 
 import DialogueBox from "../components/DialogueBox";
 import Hero from "../components/Hero";
@@ -9,9 +10,25 @@ import "../css/GeneralStyle.css";
 import "../css/PortfolioPageStyle.css";
 
 function PortfolioPage() {
+  const [gameProgress, setGameProgress] = useState(0);
 
   const [isDialogueVisible, setIsDialogueVisible] = useState(false);
   const [dialogueId, setDialogueId] = useState(null);
+
+  // init game progress
+  useEffect(() => {
+    document.body.style.background = "black";
+
+    const fetchProgress = async () => {
+      const progress = await loadProgress();
+      const levelMatch = progress.match(/level:\s*(\d+)/);
+      const level = levelMatch ? parseInt(levelMatch[1], 10) : 0;
+      setGameProgress(level);
+      console.log("Loaded Level: ", level);
+    };
+
+    fetchProgress();
+  }, []);
 
   useEffect(() => {
     document.body.style.background = "#d9d9d9";
@@ -23,21 +40,27 @@ function PortfolioPage() {
   };
 
   const onDialogueEnd = () => {
+    if (dialogueId === "Secret") {
+      saveProgress("level:1");
+      setGameProgress(1);
+    }
     setDialogueId(null);
     setIsDialogueVisible(false);
   };
 
-  const revealNextSection = () => {
+  const revealFullPage = () => {
     showDialogue("Secret");
-    console.log("Reveal next section");
-  }
-
+  };
 
   return (
     <div>
-      <DialogueBox dialogueId={dialogueId} onDialogueEnd={onDialogueEnd}/>
-      <Hero isTest={true} onButtonClick={revealNextSection}/>
-      <About/>
+      <DialogueBox dialogueId={dialogueId} onDialogueEnd={onDialogueEnd} />
+      <Hero isTest={true} isHiddenActive={gameProgress<1} onButtonClick={revealFullPage} />
+      {gameProgress >= 1 && (
+        <div>
+          <About />
+        </div>
+      )}
     </div>
   );
 }

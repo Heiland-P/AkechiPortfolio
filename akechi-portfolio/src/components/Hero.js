@@ -13,7 +13,7 @@ import Logo from "../assets/image/logo.png";
 import "../css/GeneralStyle.css";
 import "../css/HeroStyle.css";
 
-function Hero({ isTest, onButtonClick }) {
+function Hero({ isTest, isHiddenActive, onButtonClick }) {
   const animationTime = 0.5;
 
   const [NameAnimationComplete, setNameAnimationComplete] = useState(false);
@@ -115,7 +115,7 @@ function Hero({ isTest, onButtonClick }) {
           />
         </div>
       </div>
-      {isTest && (
+      {isTest && isHiddenActive && (
         <div
           className="HiddenButton"
           onClick={onButtonClick}
