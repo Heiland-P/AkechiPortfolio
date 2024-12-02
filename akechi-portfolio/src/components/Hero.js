@@ -13,9 +13,8 @@ import Logo from "../assets/image/logo.png";
 import "../css/GeneralStyle.css";
 import "../css/HeroStyle.css";
 
-function Hero() {
-
-    const animationTime = 0.5;
+function Hero({ isTest, onButtonClick }) {
+  const animationTime = 0.5;
 
   const [NameAnimationComplete, setNameAnimationComplete] = useState(false);
   const [playNavBarAnimation, setPlayNavBarAnimation] = useState(false);
@@ -24,6 +23,9 @@ function Hero() {
   const [playHeroImageAnimation, setPlayHeroImageAnimation] = useState(false);
   const [ColorAnimationComplete, setColorAnimationComplete] = useState(false);
   const [pauseEyeFollow, setPauseEyeFollow] = useState(true);
+
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     if (NameAnimationComplete) {
@@ -39,6 +41,18 @@ function Hero() {
     }
   }, [ColorAnimationComplete]);
 
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <div>
       <NavBar
@@ -49,7 +63,7 @@ function Hero() {
           setColorAnimationComplete(true);
         }}
       />
-      <div className="HText body">
+      <div className="HText center">
         <div className="HTextSpacerT"></div>
         <div className="HName">
           <HeroName
@@ -67,7 +81,7 @@ function Hero() {
         <div className="HTextSpacerB"></div>
       </div>
 
-      <div className="background body">
+      <div className="background center">
         <div className="bgWhite"></div>
         <img className="bgLogo" src={Logo} alt="Akechi Logo" />
       </div>
@@ -81,10 +95,11 @@ function Hero() {
           />
         </div>
 
-        <div className="HBImage body">
-          <HeroImage animationState={playHeroImageAnimation} 
-          animationTime={0.2}
-          pause={pauseEyeFollow}
+        <div className="HBImage">
+          <HeroImage
+            animationState={playHeroImageAnimation}
+            animationTime={0.2}
+            pause={pauseEyeFollow}
           />
         </div>
       </div>
@@ -100,6 +115,27 @@ function Hero() {
           />
         </div>
       </div>
+      {isTest && (
+        <div
+          className="HiddenButton"
+          onClick={onButtonClick}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        ></div>
+      )}
+
+      {isHovered && isTest && (
+        <span
+          className="TooltipText BodyText"
+          style={{
+            position: "absolute",
+            top: mousePosition.y + 30,
+            left: mousePosition.x + 90,
+          }}
+        >
+          Reveal The Secret
+        </span>
+      )}
     </div>
   );
 }

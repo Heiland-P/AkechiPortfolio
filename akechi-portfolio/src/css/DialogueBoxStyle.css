@@ -16,7 +16,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  z-index: 400;
+  z-index: 500;
   border: 0px;
   margin: 0px;
   overflow: hidden;
@@ -79,7 +79,7 @@
   position: absolute;
   top: 74%;
   left: 40%;
-  width: 35%;
+  width: 36%;
   line-height: 3vh;
   word-spacing: 0.2em;
 }

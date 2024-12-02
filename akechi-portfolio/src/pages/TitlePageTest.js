@@ -94,7 +94,8 @@ const TitlePageTest = () => {
           Click Button on the Bottom Right to check the previous story.
           <br />
           <br />
-
+          Contact the author for any issues. (小红书：94107328612)
+          <br />
           {/* <br />
           Contact the author of the game for pictures of the name card.
           <br />

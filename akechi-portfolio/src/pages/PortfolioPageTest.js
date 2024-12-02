@@ -13,7 +13,7 @@ function PortfolioPageTest() {
 
   return (
     <div>
-      <Hero />
+      <Hero isTest={false}/>
       <div className="TitleText"
         style={{
           position: "absolute",

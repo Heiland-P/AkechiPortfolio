@@ -44,4 +44,46 @@
       }
     ]
   }
+  ,
+  {
+    "id": "Secret",
+    "lines": [
+      {
+        "text": "Hello there. ",
+        "background": "assets/image/Dialogue/N_N.png"
+      },
+      {
+        "text": "You've found my little challenge. Splendid.",
+        "background": "assets/image/Dialogue/N_Happy.png"
+      },
+      {
+        "text": "It seems my hint didn't go unnoticed. Not bad for an ordinary individual.",
+        "background": "assets/image/Dialogue/N_Smug.png"
+      },
+      {
+        "text": "I know I sensed something quite…… intriguing about you when we first met.",
+        "background": "assets/image/Dialogue/N_Happy.png"
+      },
+      {
+        "text": "This might come off as presumptuous, but I need to ask you for a favor.",
+        "background": "assets/image/Dialogue/N_Sad.png"
+      },
+      {
+        "text": "However, before I get into the details, I must confirm that you have the capability to handle the matter. ",
+        "background": "assets/image/Dialogue/N_Disguested.png"
+      },
+      {
+        "text": "The next step has already been unlocked. ",
+        "background": "assets/image/Dialogue/N_N.png"
+      },
+      {
+        "text": "I'd advise you to examine very closely to every word on this website. ",
+        "background": "assets/image/Dialogue/N_Smug.png"
+      },
+      {
+        "text": "Good luck then. ",
+        "background": "assets/image/Dialogue/N_Happy.png"
+      }
+    ]
+  }
 ]
