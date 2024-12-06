@@ -11,6 +11,10 @@ import "../css/GeneralStyle.css";
 function LogButton({ onShowList }) {
   const [showTooltip, setShowTooltip] = useState(false);
 
+  const handleClick = (id) => {
+    onShowList(id);
+  }
+
   return (
     <div className="Log">
       {showTooltip && (
@@ -25,7 +29,7 @@ function LogButton({ onShowList }) {
         </motion.div>
       )}
 
-      <button className="LogButton" onClick={onShowList}>
+      <button className="LogButton" onClick= {() => handleClick("Greeting")}>
         <motion.img
           className="LBImge"
           src={ButtonIcon}
@@ -36,9 +40,16 @@ function LogButton({ onShowList }) {
         />
       </button>
 
-
-
-
+      {/* <button className="LogButton" onClick={onShowList}>
+        <motion.img
+          className="LBImge"
+          src={ButtonIcon}
+          alt=""
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={() => setShowTooltip(true)}
+          onHoverEnd={() => setShowTooltip(false)}
+        />
+      </button> */}
       
     </div>
   );

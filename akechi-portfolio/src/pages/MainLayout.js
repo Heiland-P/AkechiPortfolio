@@ -27,7 +27,7 @@ function MainLayout() {
 
   return (
     <div>
-      <LogButton onActivateDialogue={handleActivateDialogue} />
+      <LogButton onShowList={handleActivateDialogue} />
       {showDialogue && (
         <DialogueBox dialogueId={dialogueId} onDialogueEnd={onDialogueEnd} />
       )}
