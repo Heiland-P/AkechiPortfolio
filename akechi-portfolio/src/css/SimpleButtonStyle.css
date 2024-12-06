@@ -7,13 +7,13 @@
   position: relative;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1536px) {
   .SimpleButton {
     font-size: var(--text-size-small);
   }
 }
 
-@media screen and (min-width: 1367px) and (max-width: 2559px) {
+@media screen and (min-width: 1537px) and (max-width: 2559px) {
   .SimpleButton {
     font-size: var(--text-size-medium);
   }

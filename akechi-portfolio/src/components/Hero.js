@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { motion, useAnimationControls } from "framer-motion";
 
 import NavBar from "../components/NavBar";
 import SimpleButton from "../components/SimpleButton";
@@ -63,7 +62,7 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
           setColorAnimationComplete(true);
         }}
       />
-      <div className="HText center">
+      <div className="HText">
         <div className="HTextSpacerT"></div>
         <div className="HName">
           <HeroName

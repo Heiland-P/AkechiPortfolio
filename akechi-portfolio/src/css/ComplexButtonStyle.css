@@ -2,11 +2,28 @@
     background: none;
     border: none;
     color: var(--text-color);
-    font-size: var(--text-size);
     padding: 0px 30px 0px 30px ;
     overflow: visible;
     position: relative;
 }
+
+@media screen and (max-width: 1536px) {
+    .ComplexButton {
+      font-size: var(--text-size-small);
+    }
+  }
+  
+  @media screen and (min-width: 1537px) and (max-width: 2559px) {
+    .ComplexButton {
+      font-size: var(--text-size-medium);
+    }
+  }
+  
+  @media screen and (min-width: 2560px) {
+    .ComplexButton {
+      font-size: var(--text-size-large);
+    }
+  }
 
 .ComplexButton:focus{
     outline: none;

@@ -38,7 +38,7 @@ body {
   word-wrap: break-word;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1536px) {
   .TitleText {
     font-size: 1.5rem;
     line-height: 2;
@@ -50,9 +50,9 @@ body {
   }
 }
 
-@media screen and (min-width:1367px) and (max-width: 2559px) {
+@media screen and (min-width:1537px) and (max-width: 2559px) {
   .TitleText {
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: 2;
   }
 
@@ -64,7 +64,7 @@ body {
 
 @media screen and (min-width:2560px) {
   .TitleText {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     line-height: 2;
   }
 

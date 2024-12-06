@@ -9,7 +9,6 @@ import "../css/GeneralStyle.css";
 
 function NavBar({
   animationState,
-  setAnimationState,
   animationTime = 1,
   onAnimationComplete,
 }) {
@@ -44,7 +43,6 @@ function NavBar({
             text_color="black"
             bg_color_1="#FFE285"
             bg_color_2="#FF7878"
-            text_size="16px"
             onClickHandler={() => {}}
           />
         </div>
@@ -54,7 +52,6 @@ function NavBar({
             text_color="black"
             bg_color_1="#FFE285"
             bg_color_2="#FF7878"
-            text_size="16px"
             onClickHandler={() => {}}
           />
         </div>
@@ -64,7 +61,6 @@ function NavBar({
             text_color="black"
             bg_color_1="#FFE285"
             bg_color_2="#FF7878"
-            text_size="16px"
             onClickHandler={() => {}}
           />
         </div>
@@ -74,7 +70,6 @@ function NavBar({
             text_color="black"
             bg_color_1="#FFE285"
             bg_color_2="#FF7878"
-            text_size="16px"
             onClickHandler={() => {}}
           />
         </div>

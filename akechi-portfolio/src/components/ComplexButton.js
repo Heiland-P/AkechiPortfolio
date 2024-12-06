@@ -10,7 +10,7 @@ function ComplexButton({
   hover_text_color = "red",
   bg_color_1 = "blue",
   bg_color_2 = "blue",
-  text_size = "16px",
+  text_sizes = ["0.9rem", "1rem", "1.3rem"],
   onClickHandler,
 }) {
   const bgControls_1 = useAnimationControls();
@@ -30,7 +30,9 @@ function ComplexButton({
       style={{
         "--text-color": text_color,
         "--text-color-hover": hover_text_color,
-        "--text-size": text_size,
+        "--text-size-small": text_sizes[0],
+        "--text-size-medium": text_sizes[1],
+        "--text-size-large": text_sizes[2],
       }}
       onHoverStart={() => {
         bgControls_1.start("hover");
