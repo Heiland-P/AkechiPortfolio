@@ -1,4 +1,19 @@
-html, body {
+@font-face {
+  font-family: "Optima nova LT Black";
+  src: url("/src/assets/font/Optima-nova-LT-Black-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Optima nova LT Italic";
+  src: url("/src/assets/font/Optima-nova-LT-Black-Italic.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden; /* Prevent scrollbars */
@@ -7,7 +22,7 @@ html, body {
   box-sizing: border-box;
 }
 
-.center{
+.center {
   width: 1400px;
   left: 50%;
   transform: translateX(-50%);
@@ -22,8 +37,8 @@ html, body {
 }
 
 .BodyText {
-    font-size: 16px;
-    font-family: "Optima nova LT Black";
-    line-height: 24px;
-    word-wrap: break-word;
+  font-size: 16px;
+  font-family: "Optima nova LT Black";
+  line-height: 24px;
+  word-wrap: break-word;
 }

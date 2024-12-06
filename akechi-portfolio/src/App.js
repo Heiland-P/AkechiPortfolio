@@ -21,6 +21,14 @@ const App = () => {
       name: "P5_Menu",
       url: require("./assets/font/Persona5MenuFontPrototype-Regular.ttf"),
     },
+    {
+      name: "Optima nova LT Black",
+      url: require("./assets/font/Optima-nova-LT-Black-Regular.otf"),
+    },
+    {
+      name: "Optima nova LT Italic",
+      url: require("./assets/font/Optima-nova-LT-Black-Italic.otf"),
+    },
   ]);
 
   useEffect(() => {
