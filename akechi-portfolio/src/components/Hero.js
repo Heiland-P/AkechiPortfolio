@@ -54,7 +54,7 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
   }, []);
 
   return (
-    <div>
+    <div className="HeroParent">
       <NavBar
         animationState={playNavBarAnimation}
         setAnimationState={setPlayNavBarAnimation}

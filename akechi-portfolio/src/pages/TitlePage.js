@@ -99,7 +99,7 @@ const TitlePage = () => {
             text_color="white"
             hover_text_color="black"
             bg_color="white"
-            text_size="25px"
+            text_sizes={["1.2rem", "1.7rem", "2rem"]}
             onClickHandler={handleNewGame}
           />
         </div>
@@ -111,7 +111,7 @@ const TitlePage = () => {
               text_color="white"
               hover_text_color="black"
               bg_color="white"
-              text_size="25px"
+              text_sizes={["1.2rem", "1.7rem", "2rem"]}
               onClickHandler={() => {
                 navigate("/portfolio");
               }}

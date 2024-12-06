@@ -9,7 +9,7 @@ const SimpleButton = ({
   text_color = "red",
   hover_text_color = "red",
   bg_color = "blue",
-  text_size = "16px",
+  text_sizes = ["1.5rem", "2rem", "2.5rem"],
   onClickHandler,
 }) => {
   const bgControls = useAnimationControls();
@@ -24,7 +24,9 @@ const SimpleButton = ({
       style={{
         "--text-color": text_color,
         "--text-color-hover": hover_text_color,
-        "--text-size": text_size,
+        "--text-size-small": text_sizes[0],
+        "--text-size-medium": text_sizes[1],
+        "--text-size-large": text_sizes[2],
       }}
       onHoverStart={() => {
         bgControls.start("hover");

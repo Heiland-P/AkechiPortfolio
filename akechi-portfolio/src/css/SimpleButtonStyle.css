@@ -1,36 +1,53 @@
-.SimpleButton{
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: var(--text-size);
-    padding: 0px 30px 0px 30px ;
-    overflow: visible;
-    position: relative;
+.SimpleButton {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  padding: 0px 30px 0px 30px;
+  overflow: visible;
+  position: relative;
 }
 
-.SimpleButton:focus{
-    outline: none;
+@media screen and (max-width: 1366px) {
+  .SimpleButton {
+    font-size: var(--text-size-small);
+  }
 }
 
-.SimpleButton .backgroundShape{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0;
+@media screen and (min-width: 1367px) and (max-width: 2559px) {
+  .SimpleButton {
+    font-size: var(--text-size-medium);
+  }
 }
 
-.SimpleButton:hover .backgroundShape{
-    opacity: 1;
+@media screen and (min-width: 2560px) {
+  .SimpleButton {
+    font-size: var(--text-size-large);
+  }
 }
 
-.SimpleButton svg{
-    width: 100%;
-    height: 100%;
+.SimpleButton:focus {
+  outline: none;
 }
 
-.SimpleButton:hover{
-    color: var(--text-color-hover);
-} 
+.SimpleButton .backgroundShape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.SimpleButton:hover .backgroundShape {
+  opacity: 1;
+}
+
+.SimpleButton svg {
+  width: 100%;
+  height: 100%;
+}
+
+.SimpleButton:hover {
+  color: var(--text-color-hover);
+}

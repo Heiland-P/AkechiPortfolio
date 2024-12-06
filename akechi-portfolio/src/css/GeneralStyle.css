@@ -16,29 +16,61 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent scrollbars */
   width: 100%;
   height: 100%;
   box-sizing: border-box;
 }
 
-.center {
-  width: 1400px;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-}
+
+/* Text Style */
 
 .TitleText {
-  font-size: 32px;
+  font-size: 2rem;
   font-family: "Optima nova LT Black";
-  line-height: 38.2px;
+  line-height: 2;
   word-wrap: break-word;
 }
 
 .BodyText {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "Optima nova LT Black";
-  line-height: 24px;
+  line-height: 1.5;
   word-wrap: break-word;
+}
+
+@media screen and (max-width: 1366px) {
+  .TitleText {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+
+  .BodyText {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width:1367px) and (max-width: 2559px) {
+  .TitleText {
+    font-size: 2rem;
+    line-height: 2;
+  }
+
+  .BodyText {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width:2560px) {
+  .TitleText {
+    font-size: 2.5rem;
+    line-height: 2;
+  }
+
+  .BodyText {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  
 }

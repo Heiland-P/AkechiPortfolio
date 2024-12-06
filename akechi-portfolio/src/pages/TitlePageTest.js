@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import instance from "../axiosInstance";
@@ -13,7 +13,6 @@ import "../css/GeneralStyle.css";
 import "../css/TitlePageStyle.css";
 
 const TitlePageTest = () => {
-
   const navigate = useNavigate();
 
   const [testCode, setTestCode] = useState("");
@@ -28,19 +27,17 @@ const TitlePageTest = () => {
     setTestCode(e.target.value);
   };
 
-
   const handleTestCodeSubmit = async () => {
-    if(!testCode) {
+    if (!testCode) {
       navigate("/portfoliotest");
       return;
     }
 
     console.log("TestCode: test code:", testCode);
-    
-    try {
 
-      const response = await instance.post('/check-testcode', {
-        passcode: testCode
+    try {
+      const response = await instance.post("/check-testcode", {
+        passcode: testCode,
       });
 
       //const data = await response.json();
@@ -58,8 +55,6 @@ const TitlePageTest = () => {
       setErrorMessage("An error occurred. Please try again.");
     }
   };
-
-
 
   return (
     <div className="TitleMenu">
@@ -127,21 +122,20 @@ const TitlePageTest = () => {
         <span>
           <br />
           Full game coming 2025.
-          </span>
+        </span>
       </div>
 
-      <div className="StartButton">
-        <SimpleButton
-          text="Start"
-          text_color="white"
-          hover_text_color="black"
-          bg_color="white"
-          text_size="25px"
-          onClickHandler={() => {
-            handleTestCodeSubmit();
-          }}
-        />
-      </div>
+      <SimpleButton
+        className="StartButton"
+        text="Start"
+        text_color="white"
+        hover_text_color="black"
+        bg_color="white"
+        text_sizes={["1.2rem", "1.7rem", "2rem"]}
+        onClickHandler={() => {
+          handleTestCodeSubmit();
+        }}
+      />
 
       <div className="TestCodeInput">
         <input
@@ -149,11 +143,9 @@ const TitlePageTest = () => {
           value={testCode}
           onChange={handleTestCodeChange}
           placeholder="Enter test code"
-        /> 
-        {errorMessage && <div className="ErrorMessage">{errorMessage}</div>}
+        />
+        {errorMessage && <div className="ErrorMessage BodyText">{errorMessage}</div>}
       </div>
-
-
     </div>
   );
 };

@@ -1,12 +1,56 @@
+.HeroParent{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 /* Text Style */
 .HText {
-  height: 98vh;
-  right: 0px;
+  height: 100vh;
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: end;
-  padding-right: 5%;
+}
+
+@media screen and (max-width: 1366px) {
+  .HText {
+    right: 5vw;
+  }
+  
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1535px) {
+  .HText {
+    right: 5vw;
+  }
+  
+}
+
+@media screen and (min-width:1535px) and (max-width: 1920px) {
+  .HText {
+    right: 10vw;
+  }
+  
+}
+
+@media screen and (min-width:1920px) and (max-width: 2560px) {
+  .HText {
+    right: 15vw;
+  }
+  
+}
+
+@media screen and (min-width:2560px) and (max-width: 2600px) {
+  .HText {
+    right: 15vw;
+  }
+  
 }
 
 .HName {
@@ -50,6 +94,13 @@
 .HTextSpacerB {
   flex: auto 2 1;
 }
+
+
+
+
+
+
+
 
 /* background style */
 .background {
@@ -119,7 +170,7 @@
   border: 0px;
   z-index: 300;
   transform: translate(-50%, -50%);
-  /* background-color: green; */
+  background-color: green;
 }
 
 .TooltipText {
