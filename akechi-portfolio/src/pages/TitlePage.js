@@ -28,10 +28,8 @@ const TitlePage = () => {
 
     const fetchProgress = async () => {
       const progress = await loadProgress();
-      const levelMatch = progress.match(/level:\s*(\d+)/);
-      const level = levelMatch ? parseInt(levelMatch[1], 10) : 0;
-      setGameProgress(level);
-      console.log("Loaded Level: ", level);
+      setGameProgress(progress);
+      console.log("SaveLoad: Loaded Level: ", progress);
     };
 
     fetchProgress();

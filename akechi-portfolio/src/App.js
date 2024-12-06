@@ -32,7 +32,6 @@ const App = () => {
   ]);
 
   useEffect(() => {
-    console.log("Preloading...");
 
     const loadImagesFromContext = (context) => {
       return context.keys().map(context);
@@ -61,17 +60,17 @@ const App = () => {
   const isLoadingImage = usePreloadImages(imagesToPreload);
   const isLoadingFont = usePreloadFont(fontsToPreload);
 
-  useEffect(() => {
-    if (!isLoadingImage) {
-      console.log("Image preloading: " + isLoadingImage);
-    }
-  }, [isLoadingImage]);
+  // useEffect(() => {
+  //   if (!isLoadingImage) {
+  //     console.log("Image preloading: " + isLoadingImage);
+  //   }
+  // }, [isLoadingImage]);
 
-  useEffect(() => {
-    if (!isLoadingFont) {
-      console.log("Font preloading: " + isLoadingFont);
-    }
-  }, [isLoadingFont]);
+  // useEffect(() => {
+  //   if (!isLoadingFont) {
+  //     console.log("Font preloading: " + isLoadingFont);
+  //   }
+  // }, [isLoadingFont]);
 
   return (
     <div>

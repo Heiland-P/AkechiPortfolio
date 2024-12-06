@@ -30,7 +30,7 @@ function DialogueBox({ dialogueId, onDialogueEnd }) {
       import(`../${currentLine.background}`)
         .then((image) => setBackgroundImage(image.default))
         .catch((error) => {
-          console.error("Error loading background image:", error);
+          console.error("Dialogue: Error loading background image:", error);
           setBackgroundImage(null);
         });
     }
@@ -50,7 +50,7 @@ function DialogueBox({ dialogueId, onDialogueEnd }) {
 
   if (!dialogue) 
     {
-      console.log("dialogue is null");
+      console.log("Dialogue: dialogue is null");
       return null
     };
 

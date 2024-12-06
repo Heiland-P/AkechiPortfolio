@@ -21,8 +21,8 @@ function MainLayout() {
   };
 
   useEffect(() => {
-    console.log("showDialogue:", showDialogue);
-    console.log("dialogueId:", dialogueId);
+    console.log("Dialogue: showDialogue:", showDialogue);
+    console.log("Dialogue: dialogueId:", dialogueId);
   }, [showDialogue, dialogueId]);
 
   return (

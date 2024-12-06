@@ -35,7 +35,7 @@ const TitlePageTest = () => {
       return;
     }
 
-    console.log("test code:", testCode);
+    console.log("TestCode: test code:", testCode);
     
     try {
 
@@ -46,7 +46,7 @@ const TitlePageTest = () => {
       //const data = await response.json();
       const data = response.data;
 
-      console.log("Test code validation response:", data);
+      console.log("TestCode: Test code validation response:", data);
 
       if (data.success) {
         navigate("/portfolio");
@@ -54,7 +54,7 @@ const TitlePageTest = () => {
         setErrorMessage("Invalid test code.");
       }
     } catch (error) {
-      console.error("Error validating test code:", error);
+      console.error("TestCode: Error validating test code:", error);
       setErrorMessage("An error occurred. Please try again.");
     }
   };
