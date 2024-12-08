@@ -174,7 +174,6 @@
   border: 0px;
   z-index: 300;
   transform: translate(-50%, -50%);
-  background-color: green;
 }
 
 .TooltipText {
