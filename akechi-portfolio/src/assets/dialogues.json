@@ -20,7 +20,7 @@
       },
       {
         "text": "I must admit, my popularity isn't quite what it once was. Thanks to certain… recent events. ",
-        "background": "assets/image/Dialogue/W_Sad.png"
+        "background": "assets/image/Dialogue/W_N.png"
       },
       {
         "text": "Here, take this—my name card. It includes my website. ",
@@ -40,7 +40,7 @@
       },
       {
         "text": " If you ever come across a case you need help with, don't hesitate to send me an email. ",
-        "background": "assets/image/Dialogue/W_Smug.png"
+        "background": "assets/image/Dialogue/W_N.png"
       }
     ]
   }
@@ -58,11 +58,11 @@
       },
       {
         "text": "It seems my hint didn't go unnoticed. Not bad for an ordinary individual.",
-        "background": "assets/image/Dialogue/N_Smug.png"
+        "background": "assets/image/Dialogue/N_N.png"
       },
       {
         "text": "I know I sensed something quite…… intriguing about you when we first met.",
-        "background": "assets/image/Dialogue/N_Happy.png"
+        "background": "assets/image/Dialogue/N_N.png"
       },
       {
         "text": "This might come off as presumptuous, but I need to ask you for a favor.",
@@ -70,7 +70,7 @@
       },
       {
         "text": "However, before I get into the details, I must confirm that you have the capability to handle the matter. ",
-        "background": "assets/image/Dialogue/N_Disguested.png"
+        "background": "assets/image/Dialogue/N_N.png"
       },
       {
         "text": "The next step has already been unlocked. ",
