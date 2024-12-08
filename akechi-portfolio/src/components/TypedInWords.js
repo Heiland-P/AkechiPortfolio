@@ -7,7 +7,7 @@ import "../css/TypedInWordsStyle.css";
 function TypedInWords({
   text = "TypedInWords",
   fontfamily = "Optima nova LT Black",
-  fontSize = "16px",
+  fontSizes = ["1.5rem", "1.9rem", "2.3rem"],
   fontColor = "black",
   duration = 0.15,
   start = false,
@@ -40,8 +40,10 @@ function TypedInWords({
       className="TypedText"
       style={{
         fontFamily: fontfamily,
-        fontSize: fontSize,
         color: fontColor,
+        "--text-size-small": fontSizes[0],
+        "--text-size-medium": fontSizes[1],
+        "--text-size-large": fontSizes[2],
       }}
     >
       {text.split("").map((char, index) => (

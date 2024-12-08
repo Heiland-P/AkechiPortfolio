@@ -26,7 +26,7 @@ function HeroName({
         <TypedInWords
           text="GORO"
           fontfamily="P5_Expose"
-          fontSize="128px"
+          fontSizes = {["6rem", "8rem", "11.5em"]}
           fontColor="black"
           onAnimationComplete={() => {
             setFirstNameComplete(true);
@@ -40,7 +40,7 @@ function HeroName({
         <TypedInWords
           text="AKECHI"
           fontfamily="P5_Expose"
-          fontSize="128px"
+          fontSizes = {["6rem", "8rem", "11.5em"]}
           start={firstNameComplete}
           onAnimationComplete={() => {
             onAnimationComplete();

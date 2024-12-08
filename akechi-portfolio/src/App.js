@@ -29,6 +29,10 @@ const App = () => {
       name: "Optima nova LT Italic",
       url: require("./assets/font/Optima-nova-LT-Black-Italic.otf"),
     },
+    {
+      name: "Optima nova LT",
+      url: require("./assets/font/Optima-nova-LT-Regular.otf"),
+    },
   ]);
 
   useEffect(() => {

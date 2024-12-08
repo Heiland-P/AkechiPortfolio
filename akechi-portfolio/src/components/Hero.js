@@ -76,11 +76,19 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
         <div className="HQuote">
           "Justice is a balacnce and my role is to tip the scale towards truth."
         </div>
+        <div className="LearnMoreButton">
+          <SimpleButton
+            text="Learn More"
+            text_color="black"
+            hover_text_color="white"
+            bg_color="black"
+          />
+        </div>
 
         <div className="HTextSpacerB"></div>
       </div>
 
-      <div className="background center">
+      <div className="background">
         <div className="bgWhite"></div>
         <img className="bgLogo" src={Logo} alt="Akechi Logo" />
       </div>
@@ -103,17 +111,7 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
         </div>
       </div>
 
-      <div className="LearnMoreButtonParent body">
-        <div className="LearnMoreButton">
-          <SimpleButton
-            text="Learn More"
-            text_color="black"
-            hover_text_color="white"
-            bg_color="black"
-            text_size="32px"
-          />
-        </div>
-      </div>
+
       {isTest && isHiddenActive && (
         <div
           className="HiddenButton"
