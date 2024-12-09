@@ -60,14 +60,16 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
     offset: ["start start", "end start"],
   });
 
-  const bgScroll = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const logoOpacity = useTransform(scrollYProgress, [0, 0.3], [0.4, 0]);
-  const translateLeft = useTransform(scrollYProgress, [0, 0.3], [0, -50]);
-  const translateRight = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const bgScroll = useTransform(scrollYProgress, [0.1, 0.5], [1, 0]);
+  const logoOpacity = useTransform(scrollYProgress, [0.1, 0.5], [0.4, 0]);
+  const translateLeft = useTransform(scrollYProgress, [0.1, 0.5], [0, -50]);
+  const translateRight = useTransform(scrollYProgress, [0.1, 0.5], [0, 50]);
+  const textOpacity = useTransform(scrollYProgress, [0.1, 0.5], [1, 0]);
 
   return (
-    <div className="HeroParent" ref={scrollRef}>
+    <div className="HeroParent" ref={scrollRef} style={{
+      overflow: !isTest ? "hidden" : (isHiddenActive ? "hidden" : "visible"),
+    }}>
       <NavBar
         animationState={playNavBarAnimation}
         setAnimationState={setPlayNavBarAnimation}

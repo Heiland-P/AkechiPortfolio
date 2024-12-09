@@ -12,7 +12,7 @@ function PortfolioPageTest() {
   }, []);
 
   return (
-    <div>
+    <div className="scrollBox">
       <Hero isTest={false}/>
       <div className="TitleText"
         style={{

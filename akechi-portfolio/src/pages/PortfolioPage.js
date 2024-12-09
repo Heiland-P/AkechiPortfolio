@@ -55,7 +55,7 @@ function PortfolioPage() {
   };
 
   return (
-    <div>
+    <div className="scrollBox">
       <DialogueBox dialogueId={dialogueId} onDialogueEnd={onDialogueEnd} />
       <Hero isTest={true} isHiddenActive={gameProgress<1} onButtonClick={revealFullPage} />
       {gameProgress >= 1 && (

@@ -25,11 +25,13 @@ function HeroBottomShape({ animationState, animationTime, scrollYProgress }) {
 
   const RoatateAnimation = {
     hidden: {
+      x: "-5%",
       opacity: 0,
       rotate: 90,
       y: 100,
     },
     visible: {
+      x: "-5%",
       opacity: 1,
       rotate: 0,
       y: 0,
@@ -37,17 +39,9 @@ function HeroBottomShape({ animationState, animationTime, scrollYProgress }) {
   };
 
   //Scroll Animation
-  const rotateY = useTransform(scrollYProgress, [0.05, 1], [0, 30]);
-  const rotateR = useTransform(scrollYProgress, [0, 1], [0, 35]);
-  const opacityScroll = useTransform(scrollYProgress, [0.1, 0.3], [1, 0]);
-
-  // Debug scrollYProgress value
-  // useEffect(() => {
-  //   const unsubscribe = scrollYProgress.on("change", (value) => {
-  //     console.log("scrollYProgress:", value);
-  //   });
-  //   return () => unsubscribe();
-  // }, [scrollYProgress]);
+  const rotateY = useTransform(scrollYProgress, [0.2, 1], [0, 30]);
+  const rotateR = useTransform(scrollYProgress, [0, 1], [0, 30]);
+  const opacityScroll = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
 
   return (
     <motion.div className="Parent" style={{opacity: opacityScroll}}>

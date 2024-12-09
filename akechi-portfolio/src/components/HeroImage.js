@@ -28,8 +28,8 @@ function HeroImage({
   }, [animationState]);
 
   //Scroll Animation
-  const translateX = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const translateX = useTransform(scrollYProgress, [0.1, 0.5], [0, -100]);
+  const opacity = useTransform(scrollYProgress, [0.1, 0.5], [1, 0]);
 
   return (
     <motion.div style={{ translateX, opacity }}
