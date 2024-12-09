@@ -1,13 +1,18 @@
 import React from "react";
-import { motion, useAnimationControls } from "framer-motion";
-import { useEffect } from "react";
+import {
+  motion,
+  useAnimationControls,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useEffect, useRef } from "react";
 
 import HBShapeR from "../assets/image/HBottom_red.png";
 import HBShapeY from "../assets/image/HBottom_y.png";
 
 import "../css/HeroBottomShapeStyle.css";
 
-function HeroBottomShape({ animationState, setAnimationState, animationTime }) {
+function HeroBottomShape({ animationState, animationTime, scrollYProgress }) {
   const RYControl = useAnimationControls();
   const RRControl = useAnimationControls();
 
@@ -31,9 +36,23 @@ function HeroBottomShape({ animationState, setAnimationState, animationTime }) {
     },
   };
 
+  //Scroll Animation
+  const rotateY = useTransform(scrollYProgress, [0.05, 1], [0, 30]);
+  const rotateR = useTransform(scrollYProgress, [0, 1], [0, 35]);
+  const opacityScroll = useTransform(scrollYProgress, [0.1, 0.3], [1, 0]);
+
+  // Debug scrollYProgress value
+  // useEffect(() => {
+  //   const unsubscribe = scrollYProgress.on("change", (value) => {
+  //     console.log("scrollYProgress:", value);
+  //   });
+  //   return () => unsubscribe();
+  // }, [scrollYProgress]);
+
   return (
-    <div className="Parent">
+    <motion.div className="Parent" style={{opacity: opacityScroll}}>
       <motion.img
+        style={{ rotate: rotateY }}
         className="HBShape YShape"
         src={HBShapeY}
         alt="Yellow Shape"
@@ -47,6 +66,7 @@ function HeroBottomShape({ animationState, setAnimationState, animationTime }) {
       />
       <motion.img
         className="HBShape RShape"
+        style={{ rotate: rotateR }}
         src={HBShapeR}
         alt="Red Shape"
         variants={RoatateAnimation}
@@ -55,10 +75,10 @@ function HeroBottomShape({ animationState, setAnimationState, animationTime }) {
         transition={{
           duration: animationTime,
           ease: "easeInOut",
-          delay:0.1
+          delay: 0.1,
         }}
       />
-    </div>
+    </motion.div>
   );
 }
 

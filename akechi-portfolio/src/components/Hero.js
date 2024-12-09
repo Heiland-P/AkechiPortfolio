@@ -1,5 +1,6 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import NavBar from "../components/NavBar";
 import SimpleButton from "../components/SimpleButton";
@@ -52,8 +53,21 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
     };
   }, []);
 
+  //Scroll Animation
+  const scrollRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ["start start", "end start"],
+  });
+
+  const bgScroll = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const logoOpacity = useTransform(scrollYProgress, [0, 0.3], [0.4, 0]);
+  const translateLeft = useTransform(scrollYProgress, [0, 0.3], [0, -50]);
+  const translateRight = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+
   return (
-    <div className="HeroParent">
+    <div className="HeroParent" ref={scrollRef}>
       <NavBar
         animationState={playNavBarAnimation}
         setAnimationState={setPlayNavBarAnimation}
@@ -62,7 +76,7 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
           setColorAnimationComplete(true);
         }}
       />
-      <div className="HText">
+      <motion.div className="HText" style={{x:translateRight, opacity:textOpacity}}>
         <div className="HTextSpacerT"></div>
         <div className="HName">
           <HeroName
@@ -86,16 +100,22 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
         </div>
 
         <div className="HTextSpacerB"></div>
-      </div>
+      </motion.div>
 
       <div className="background">
-        <div className="bgWhite"></div>
-        <img className="bgLogo" src={Logo} alt="Akechi Logo" />
+        <motion.div style={{ width: "100%", height:"100%", scaleX: bgScroll }}>
+          <div className="bgWhite"></div>
+        </motion.div>
+        <motion.img className="bgLogo" src={Logo} alt="Akechi Logo" style={{
+          opacity: logoOpacity,
+          x: translateLeft,
+        }}/>
       </div>
 
       <div className="HBottom">
         <div className="HBottonShape">
           <HeroBottomShape
+            scrollYProgress={scrollYProgress}
             animationState={playBottomShapeAnimation}
             setAnimationState={setPlayBottomShapeAnimation}
             animationTime={animationTime}
@@ -107,10 +127,10 @@ function Hero({ isTest, isHiddenActive, onButtonClick }) {
             animationState={playHeroImageAnimation}
             animationTime={0.2}
             pause={pauseEyeFollow}
+            scrollYProgress={scrollYProgress}
           />
         </div>
       </div>
-
 
       {isTest && isHiddenActive && (
         <div

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useAnimationControls } from "framer-motion";
+import { motion, useAnimationControls, useTransform } from "framer-motion";
 import { useEffect } from "react";
 
 // import HAkechi from "../assets/image/Confidant_Akechi.png";
@@ -10,8 +10,13 @@ import EyeFollowAkechi from "./EyeFollowAkechi";
 
 import "../css/HeroImageStyle.css";
 
-function HeroImage({ animationState, setAnimationState, animationTime,pause }) {
-
+function HeroImage({
+  animationState,
+  setAnimationState,
+  animationTime,
+  pause,
+  scrollYProgress,
+}) {
   const YControl = useAnimationControls();
   const RControl = useAnimationControls();
 
@@ -22,8 +27,13 @@ function HeroImage({ animationState, setAnimationState, animationTime,pause }) {
     }
   }, [animationState]);
 
+  //Scroll Animation
+  const translateX = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+
   return (
-    <div>
+    <motion.div style={{ translateX, opacity }}
+      className="Parent">
       <div className="HAkechi">
         <motion.img
           className="HAkechiImgY"
@@ -36,7 +46,7 @@ function HeroImage({ animationState, setAnimationState, animationTime,pause }) {
               y: 0,
             },
             visible: {
-              opacity: [0,1,1],
+              opacity: [0, 1, 1],
               x: 10,
               y: -10,
             },
@@ -75,11 +85,10 @@ function HeroImage({ animationState, setAnimationState, animationTime,pause }) {
         />
 
         {/* <img className="HAkechiImg" src={HAkechi} alt="" /> */}
-      
-        <EyeFollowAkechi pause={pause}/>
-      
+
+        <EyeFollowAkechi pause={pause} />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

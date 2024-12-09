@@ -15,7 +15,7 @@
 .DialogueContainer{
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 500;
   border: 0px;
   margin: 0px;

@@ -32,6 +32,10 @@ function PortfolioPage() {
     document.body.style.background = "#d9d9d9";
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const showDialogue = (id) => {
     setDialogueId(id);
     setIsDialogueVisible(true);
