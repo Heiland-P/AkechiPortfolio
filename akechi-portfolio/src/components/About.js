@@ -3,6 +3,7 @@ import { useRef, useEffect , useState} from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 import BgAbout from "../assets/image/Bg_About.png";
+import BgGradient from "../assets/image/Bg_Gradient.png";
 import Glass_1 from "../assets/image/glasses/glass_1.png";
 import Glass_2 from "../assets/image/glasses/glass_2.png";
 import Glass_3 from "../assets/image/glasses/glass_3.png";
@@ -74,7 +75,7 @@ function About() {
         src={BgAbout}
         alt="BgAbout"
         className="BgAbout"
-        style={{ scaleY: scaleY , opacity: opacity , mixBlendMode: mixBlendMode }}
+        style={{ scaleY: scaleY , opacity: opacity, mixBlendMode: mixBlendMode }}
       />
 
       <div
@@ -96,7 +97,7 @@ function About() {
             top: transGlassy_1,
           }}
         >
-          <GlassShard imgURL={Glass_1}/>
+          <GlassShard imgURL={Glass_1} playAnimation = {true}/>
         </motion.div>
 
         <motion.div
@@ -107,7 +108,7 @@ function About() {
             top: transGlassy_2,
           }}
         >
-          <GlassShard imgURL={Glass_2} />
+          <GlassShard imgURL={Glass_2} playAnimation = {true}/>
         </motion.div>
 
         <motion.div
@@ -184,7 +185,7 @@ function About() {
             top: transGlassy_9,
           }}
         >
-          <GlassShard imgURL={Glass_9} />
+          <GlassShard imgURL={Glass_9} playAnimation = {true}/>
         </motion.div>
 
         <motion.div
@@ -195,7 +196,7 @@ function About() {
             top: transGlassy_10,
           }}
         >
-          <GlassShard imgURL={Glass_10} />
+          <GlassShard imgURL={Glass_10} playAnimation = {true}/>
         </motion.div>
 
 
