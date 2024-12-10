@@ -15,4 +15,88 @@
   padding: 0;
   width: 100%;
   height: auto;
+  opacity: 1;
+  position: absolute;
+}
+
+/* Glass Pieces */
+
+.GlassPieces{
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.ShardContainer1{
+  width: 47%;
+  left: 53%;
+  top: 50%;
+  position: absolute;
+}
+
+.ShardContainer2{
+  width: 47%;
+  left: 33%;
+  top: 57%;
+  position: absolute;
+}
+
+.ShardContainer3{
+  width: 10%;
+  left: 31%;
+  top: 55%;
+  position: absolute;
+}
+
+.ShardContainer4{
+  width: 10%;
+  left: 20%;
+  top: 65%;
+  position: absolute;
+}
+
+.ShardContainer5{
+  width: 3%;
+  left: 27%;
+  top: 58%;
+  position: absolute;
+}
+
+.ShardContainer6{
+  width: 23%;
+  left: 7%;
+  top: 55%;
+  position: absolute;
+}
+
+.ShardContainer7{
+  width: 23%;
+  left: 7%;
+  top: 20%;
+  position: absolute;
+}
+
+.ShardContainer8{
+  width: 5%;
+  left: 25%;
+  top: 34%;
+  position: absolute;
+}
+
+.ShardContainer9{
+  width: 30%;
+  left: 31%;
+  top: 20%;
+  position: absolute;
+}
+
+.ShardContainer10{
+  width: 55%;
+  left: 36%;
+  top: 12%;
+  position: absolute;
 }
